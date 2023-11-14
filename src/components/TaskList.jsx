@@ -16,8 +16,8 @@ const TaskList = () => {
   const listTaskStorageParsed = JSON.parse(listTaskStorage)
 
   // Verifica si el valor del array obtenido en el LocalStorage no está vacio y lo asigna al valor inicial del array que contiene la lista de tareas
-  if(listTaskStorageParsed.length >1)
-  listTask = listTaskStorageParsed
+  // if(listTaskStorageParsed.length >1)
+  // listTask = listTaskStorageParsed
 
   // Setea el estado inicial con el array
   const [arrayList, setarrayList] = useState(listTask)
