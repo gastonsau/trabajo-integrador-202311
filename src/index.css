@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Raleway, sans-serif;
+  display: grid;
+  place-items: center;
+  background-color: #eee;
+  color: #246;
+  padding: 3em 1em;
+}
+
+.todo {
+  width: 100%;
+  max-width: 420px;
+  background-color: #ddd;
+  padding: 2em;
+  box-shadow: 1px 2px 4px #0003;
+}
+
+h1 {
+  margin: 0 auto;
+}
+
+ol {
+  -webkit-padding-start: 1.5em;
+          padding-inline-start: 1.5em;
+  font-weight: 400;
+}
+ol ::marker {
+  content: "-";
+  color: #48b;
+}
+ol ol ::marker {
+  content: ">>";
+}
+
+li {
+  position: relative;
+  -webkit-padding-start: 0.5em;
+          padding-inline-start: 0.5em;
+  padding-top: 1.5em;
+  border-bottom: 1px solid #48b2;
+  cursor: default;
+  transition: color 0.4s;
+}
+
+li:hover {
+  color: #48b;
+}
+li:hover::marker {
+  font-weight: 700;
+}
+li:hover::after {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+li.state{
+  text-align-last: right;
+}
+
+.pending-task{
+  text-decoration:line-through;
+}
+
+.completed-task{
+  text-decoration:line-through;
+}
