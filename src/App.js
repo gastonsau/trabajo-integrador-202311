@@ -6,9 +6,10 @@ import TaskList from './components/TaskList';
 
 function App() {
   return (
-    <div className="todo">
+    <div className="todoList">
+      
       <TaskList />
-
+      
     </div>
   );
 }

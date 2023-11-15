@@ -15,13 +15,17 @@ const TaskForm = ({addNewTask}) => {
 
 
   return (
-    <form onSubmit={onSubmit}>
+    <form className='add' onSubmit={onSubmit}>
         <input 
-        type = 'text' 
-        placeholder = 'Ingrese la nueva tarea' 
-        value = {inputItem} 
-        onChange = {onInputChange} 
+          type = 'text' 
+          name = 'add' 
+          placeholder = 'Ingrese la nueva tarea' 
+          value = {inputItem} 
+          onChange = {onInputChange} 
         />
+        <div className='input-buttons'>
+          <i className='fas fa-plus add'></i>
+        </div>
     </form>
   )
 }
