@@ -21,7 +21,7 @@ const TaskList = () => {
   const listTaskStorageParsed = JSON.parse(listTaskStorage)
 
   // Verifica si el valor del array obtenido en el LocalStorage no está vacio y lo asigna al valor inicial del array que contiene la lista de tareas
-  if (listTaskStorageParsed.length > 0){
+  if ((listTaskStorageParsed !== null)){
     listTask = listTaskStorageParsed
   }
   
@@ -87,10 +87,10 @@ const TaskList = () => {
     localStorage.setItem('array', jsonArray);
 
     // Trae el string JSON del localStorage
-    const storeArray = localStorage.getItem('array');
+   // const storedArray = localStorage.getItem('array');
 
     // convierte el string JSON en un objeto
-    const parsedArray = JSON.parse(storeArray);
+   // const parsedArray = JSON.parse(storedArray);
 
   }, [arrayList]);
 
