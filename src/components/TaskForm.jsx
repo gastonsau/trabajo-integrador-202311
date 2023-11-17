@@ -5,16 +5,16 @@ const TaskForm = ({ addNewTask }) => {
   const onInputChange = (event) => {
     setInputItem(event.target.value);
   };
+
   const onSubmit = (event) => {
     event.preventDefault();
+    agregarTarea();
+  };
+
+  const agregarTarea = () => {
     addNewTask(inputItem);
     setInputItem("");
   };
-
-  const botonMas = () => {
-    addNewTask(inputItem);
-    setInputItem("");    
-  }
 
   return (
     <form className="add" onSubmit={onSubmit}>
@@ -26,7 +26,7 @@ const TaskForm = ({ addNewTask }) => {
         onChange={onInputChange}
       />
       <div className="input-buttons">
-        <i className="fas fa-plus add" onClick={botonMas}></i>
+        <i className="fas fa-plus add" onClick={agregarTarea}></i>
       </div>
     </form>
   );
